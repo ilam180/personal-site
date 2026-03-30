@@ -1,0 +1,161 @@
+.hero {
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--clr-bg);
+
+  &__bg-text {
+    position: absolute;
+    bottom: -0.1em;
+    left: -0.05em;
+    font-family: var(--ff-display);
+    font-size: clamp(7rem, 22vw, 22rem);
+    font-weight: 300;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--clr-border);
+    letter-spacing: -0.03em;
+    line-height: 1;
+    user-select: none;
+    pointer-events: none;
+    white-space: nowrap;
+  }
+
+  &__inner {
+    position: relative;
+    z-index: 1;
+    padding-top: 7rem;
+    padding-bottom: 4rem;
+  }
+
+  &__meta {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.75rem;
+    animation: fadeUp 0.8s ease both;
+  }
+
+  &__tag {
+    font-family: var(--ff-mono);
+    font-size: var(--fs-xs);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--clr-ink-faint);
+  }
+
+  &__sep {
+    color: var(--clr-border);
+  }
+
+  &__name {
+    font-size: clamp(4rem, 12vw, 9rem);
+    font-weight: 300;
+    line-height: 0.95;
+    letter-spacing: -0.03em;
+    color: var(--clr-ink);
+    animation: fadeUp 0.8s 0.1s ease both;
+
+    em {
+      font-style: italic;
+      color: var(--clr-accent);
+    }
+  }
+
+  &__sub {
+    margin-top: 2rem;
+    max-width: 44ch;
+    font-size: var(--fs-md);
+    font-weight: 300;
+    color: var(--clr-ink-muted);
+    line-height: 1.65;
+    animation: fadeUp 0.8s 0.2s ease both;
+  }
+
+  &__actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2.5rem;
+    flex-wrap: wrap;
+    animation: fadeUp 0.8s 0.3s ease both;
+  }
+
+  &__scroll {
+    position: absolute;
+    bottom: 2.5rem;
+    right: clamp(1.25rem, 5vw, 3rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    animation: fadeUp 0.8s 0.5s ease both;
+  }
+
+  &__scroll-line {
+    display: block;
+    width: 1px;
+    height: 3.5rem;
+    background: linear-gradient(to bottom, transparent, var(--clr-border));
+    animation: scrollLine 2s ease-in-out infinite;
+  }
+
+  &__scroll-label {
+    font-family: var(--ff-mono);
+    font-size: var(--fs-xs);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--clr-ink-faint);
+    writing-mode: vertical-rl;
+  }
+}
+
+/* ─── Buttons ─────────────────────────────────────────────────────── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1.75rem;
+  font-family: var(--ff-mono);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: var(--radius);
+  transition: all var(--transition);
+  cursor: pointer;
+  border: 1px solid transparent;
+
+  &--primary {
+    background: var(--clr-ink);
+    color: var(--clr-bg);
+    border-color: var(--clr-ink);
+
+    &:hover {
+      background: var(--clr-accent);
+      border-color: var(--clr-accent);
+      color: var(--clr-surface);
+    }
+  }
+
+  &--ghost {
+    background: transparent;
+    color: var(--clr-ink);
+    border-color: var(--clr-border);
+
+    &:hover {
+      border-color: var(--clr-ink);
+    }
+  }
+}
+
+/* ─── Keyframes ───────────────────────────────────────────────────── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: none; }
+}
+
+@keyframes scrollLine {
+  0%, 100% { transform: scaleY(1); opacity: 1; }
+  50%       { transform: scaleY(0.5); opacity: 0.4; }
+}

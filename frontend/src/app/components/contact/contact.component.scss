@@ -1,0 +1,64 @@
+.contact {
+  background: var(--clr-bg-alt);
+  border-top: 1px solid var(--clr-border);
+
+  .section-title em {
+    font-style: italic;
+    color: var(--clr-accent);
+  }
+
+  &__intro {
+    margin-top: 1.25rem;
+    color: var(--clr-ink-muted);
+    font-size: var(--fs-md);
+    line-height: 1.75;
+    max-width: 44ch;
+  }
+
+  &__links {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid var(--clr-border);
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 1.25rem 0;
+    border-bottom: 1px solid var(--clr-border);
+    text-decoration: none;
+    gap: 1rem;
+    transition: background var(--transition);
+
+    &:hover .contact__item-value {
+      color: var(--clr-accent);
+    }
+  }
+
+  &__item-label {
+    font-family: var(--ff-mono);
+    font-size: var(--fs-xs);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--clr-ink-faint);
+  }
+
+  &__item-value {
+    font-family: var(--ff-display);
+    font-size: var(--fs-lg);
+    color: var(--clr-ink);
+    transition: color var(--transition);
+  }
+}
+
+@media (max-width: 500px) {
+  .contact__item {
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+  .contact__item-value {
+    font-size: var(--fs-md);
+  }
+}

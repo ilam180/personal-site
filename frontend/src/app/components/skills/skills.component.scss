@@ -1,0 +1,39 @@
+.skills {
+  &__grid {
+    margin-top: 3.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 3rem 4rem;
+  }
+
+  &__category {
+    font-family: var(--ff-mono);
+    font-size: var(--fs-xs);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--clr-accent);
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--clr-border);
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  &__item {
+    font-family: var(--ff-display);
+    font-size: var(--fs-md);
+    font-weight: 400;
+    color: var(--clr-ink-muted);
+    transition: color var(--transition);
+    cursor: default;
+
+    &:hover {
+      color: var(--clr-ink);
+    }
+  }
+}
