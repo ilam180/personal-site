@@ -29,7 +29,9 @@ jobs:
 
       - name: Build
         working-directory: frontend
-        run: npx ng build --configuration production --base-href "/personal-site/"
+        run: |
+          npx ng build --configuration production --base-href "/personal-site/"
+          find dist/ -type f
 
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v4
