@@ -1,0 +1,24 @@
+<section class="experience">
+  <div class="experience-list">
+    <h1>Experience</h1>
+    <div class="entry" *ngFor="let job of jobs">
+      <p class="company">{{ job.company }}</p>
+      <p class="role">{{ job.role }}</p>
+      <ul>
+        <li *ngFor="let point of job.points">{{ point }}</li>
+      </ul>
+      <mat-divider />
+    </div>
+  </div>
+  <div class="experience-list">
+    <h1>Projects</h1>
+    <div class="entry" *ngFor="let job of projects">
+      <p class="company">{{ job.company }}</p>
+      <p class="role">{{ job.role }}</p>
+      <ul>
+        <li *ngFor="let point of job.points">{{ point }}</li>
+      </ul>
+      <mat-divider />
+    </div>
+  </div>
+</section>

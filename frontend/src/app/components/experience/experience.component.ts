@@ -31,4 +31,22 @@ export class ExperienceComponent {
       ]
     }
   ];
+  projects = [
+    {
+      company: 'projects',
+      role: 'Software Engineer Co-op',
+      points: [
+        'Built enterprise IAM systems using OAuth2 and Okta',
+        'Deployed microservices on Kubernetes (AKS)'
+      ]
+    },
+    {
+      company: 'Purdue Data Mine',
+      role: 'Data Scientist',
+      points: [
+        'Sports analytics for the Indiana Fever',
+        'Built data pipelines using Spark and SQL'
+      ]
+    }
+  ];
 }
