@@ -1,0 +1,12 @@
+<section class="hero">
+  <div class="hero-content">
+    <h1>Ian Lam</h1>
+    <p>Software Engineer Intern &#64; 84.51 Degrees</p>
+    <mat-form-field appearance="outline">
+      <input matInput placeholder="Which organization are you from?" (keyup.enter)="onSubmit()" [(ngModel)]="company" />
+      <button matSuffix mat-icon-button (click)="onSubmit()">
+        <mat-icon>arrow_forward</mat-icon>
+      </button>
+    </mat-form-field>
+  </div>
+</section>
