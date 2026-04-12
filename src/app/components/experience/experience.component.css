@@ -1,0 +1,33 @@
+.experience {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 64px 24px;
+
+  .entry {
+    padding: 24px 0;
+
+    .company {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #1a1a1a;
+      margin: 0;
+    }
+
+    .role {
+      font-size: 0.95rem;
+      color: #555;
+      margin: 4px 0 12px;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 20px;
+
+      li {
+        font-size: 0.9rem;
+        color: #444;
+        margin-bottom: 4px;
+      }
+    }
+  }
+}
